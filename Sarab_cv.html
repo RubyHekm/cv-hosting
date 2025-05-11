@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+
+    <title>SB_Europass CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif;
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.cv-header{
+    padding-top: 0.7cm;
+    font-size: 1em; 
+}
+
+.cv-text{
+    margin-top: 10px
+    
+}
+
+#cv-logo{
+    margin-bottom: 0.2cm;
+    width:150px ;
+    height:auto;
+}
+
+.cv-header, .cv-sub-header{ 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.cv-header div{
+    flex: 3; 
+    height: 2em; 
+}
+
+.cv-sub-header div { 
+    flex: 1; 
+    height: 1em; 
+}
+/* Grid layout */
+.cv-grid { 
+    display: grid; 
+    grid-template-columns: 5fr 12fr; 
+    gap: 10px; 
+}
+
+.cv-grid > div { 
+    padding: 8px; 
+}
+
+.cv-grid-title { 
+    
+    text-align: right; 
+    vertical-align: top; 
+    font-size: 0.9em; 
+}
+
+.cv-grid-content { 
+    font-size: 0.9em; 
+}
+
+.cv-image-place { 
+    width: 130px; 
+    height: auto; 
+   
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.cv-second-row{
+  display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-gap: 0; 
+}
+
+.cv-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr; 
+    grid-gap: 0; 
+}
+.cv-container > div, .cv-third-fifth-row,.cv-second-row > div, .cv-fourth-six-row> div {
+    border: 1.5px solid rgb(114, 114, 114);
+    padding: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+.cv-container > div, 
+.cv-second-row > div {
+            font-size: 95%; 
+}
+
+.cv-third-fifth-row > div, 
+.cv-fourth-six-row > div {
+    font-size: 100%
+    
+}
+.cv-third-fifth-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonne di uguale larghezza */
+    grid-gap: 0; /* Rimuove lo spazio tra le colonne nella seconda riga */
+    
+}
+.cv-fourth-six-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+
+}
+.cv-container>div:first-child,
+.cv-second-row > div:first-child,
+.cv-third-fifth-row > div:first-child,
+.cv-fourth-six-row > div:first-child {
+    border-left: none;
+}
+
+.cv-container>div:last-child,
+.cv-second-row > div:last-child,
+.cv-third-fifth-row > div:last-child,
+.cv-fourth-six-row > div:last-child {
+    border-right: none;
+}
+.cv-tabella>div{
+    border-left: white;
+    border-right: white;
+}
+
+.cv-blue-text{
+  color: rgb(0, 115, 209);
+}       
+#cv-big-text{
+    font-size: 23px ;
+}
+#cv-lenguages{
+   padding-top: 0;
+
+}
+#cv-right-bottom {
+    align-self: end; /* Allinea in basso */
+    text-align: right; /* Allinea a destra */
+}
+hr{
+  border: 1px solid rgb(0, 115, 209);
+}     
+#cv-name{
+text-align: right;
+padding-right: 10px;
+}
+#cv-text-curriculum{
+text-align: left;
+padding-left: 5px;
+}
+ul {
+    list-style-type: none; /* Rimuove i puntini di iniziali della lista */
+    padding-left: 0px;
+}
+li {
+    display: flex;
+    align-items: center; /* Centra verticalmente il testo con l'immagine */
+}
+li img {
+    margin-right: 10px; /* Spazio tra l'immagine e il testo */
+}
+.cv-list-images{
+    width:20px;
+    height: auto;
+}
+#cv-luogo-img{
+    width: 15.5px;
+    height: auto;
+}
+#cv-padding-work{
+    padding-top: 25px;
+}
+#cv-padding-education{
+    padding-top: 25px; 
+}
+
+.cv-a4-wrapper {
+    background: white;
+    width: 300mm;
+    height: 805mm;
+    padding: 20mm;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+    </style>
+   
+</head>
+<body>
+    <div class="cv-a4-wrapper">
+    <div>
+        <div class="cv-header">
+            <div><img src="https://i.postimg.cc/SNDS4qnR/Europass-logo.png" alt="logo" id="cv-logo" ></div>
+            <div> <p class="cv-blue-text text" id="cv-text-curriculum">Curriculum Vitae</p> </div>
+            <div><p class="cv-blue-text text" id="cv-name">Sara Bouanani</p></div>
+        </div>
+        <div class="cv-sub-header">
+            <div></div>
+        </div>
+        <div class="cv-grid">
+            <div class="cv-grid-content cv-blue-text" id="cv-right-bottom">PERSONAL INFORMATION</div>
+            <div class="cv-grid-content" id="cv-big-text">Sara Bouanani</div>
+            <div class="cv-grid-title"><img src="https://i.postimg.cc/qqprfZ02/me.png" class="cv-image-place"></div>
+            <div class="cv-grid-content">
+                <ul>
+                    <li><img src="https://i.postimg.cc/QMWhcT0K/place.png" id="cv-luogo-img">Italy, Via Sabaudia 29, 33170, PN Rorai Grande<br> </li> 
+                    <li><img src="https://i.postimg.cc/YqprTjqT/email.png" class="cv-list-images">sabouanani00@gmail.com<br> </li>
+                    <li><img src="https://i.postimg.cc/63rKmNs9/youtube.png" class="cv-list-images">YouTube: @AracnesSilk<br> </li>
+                    <li><img src="https://i.postimg.cc/GmtchNDQ/phone.png" class="cv-list-images">(+39) 3714401312 (Cellulare)<br> </li>
+                    <li>
+                        <img src="https://i.postimg.cc/xCDY514x/whatsapp.png" class="cv-list-images"> 
+                        <img src="https://i.postimg.cc/sgL3Bc9R/insta.png" class="cv-list-images"> 
+                        WhatsApp: 3714401312 / Instagram: @nerd.sars
+                    </li>
+                    <br>
+                    <li id="cv-TEXT-INFO"> <span class="cv-blue-text">Sex</span> &nbsp; Female &nbsp; 
+                         <span class="cv-blue-text">|&nbspDate of birth </span> &nbsp; 22/10/2007 &nbsp;
+                         <span class="cv-blue-text"> |&nbspNationality </span>&nbsp; Moroccan
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="cv-grid-title cv-blue-text">
+             <div>JOB APPLIED FOR</div> 
+             <div>POSITION</div> 
+             <div>PREFERED JOB</div> 
+             <div>STUDIES APPLIED FOR</div> 
+             <div>PERSONAL STATEMENT</div>
+             
+            </div>
+            <div class="cv-grid-content">
+                <div>
+                 I'm applying for a position in the IT field, with a particular interest in cybersecurity, <br>
+                 IT support, and software development. <br>
+                 With a background in Business Information Systems and a passion for technology, <br>
+                 I am eager to apply my skills in troubleshooting, digital security, and programming. <br>
+                 Whether assisting with technical support, analyzing security vulnerabilities, or developing applications in C#, <br>
+                 I am committed to learning and contributing to innovative solutions.</div> <br>
+            <div>
+                As a Junior Developer skilled in C#, Java, HTML, CSS, and JavaScript, as well as IT support, <br>
+                I aspire to work in a dynamic IT environment where I can apply my programming skills, <br>
+                assist with technical support, and continue learning about software development and system management. <br>
+                I am eager to expand my knowledge by learning new programming languages <br>
+                and am currently studying cybersecurity to enhance my understanding of digital security. </div> <br>
+            <div>
+                Currently, I am studying Business Information Systems at Mattiussi-Pertini High School, <br>
+                with a strong interest in expanding my knowledge of programming, cybersecurity, IT support, <br>
+                psychology, and forensic science. <br>
+                This diverse academic background allows me to approach problem-solving with both <br>
+                 technical expertise and analytical thinking. </div> <br>
+            <div>
+                    I am a motivated and passionate student with a deep interest in technology, <br>
+                    programming, and video editing. Through my studies, <br>
+                    I have developed skills in languages such as C#, Java, HTML, CSS, and JavaScript. <br>
+                    Alongside my technical pursuits, I enjoy video editing, which allows me to combine creativity with my technical skills. <br>
+                    I am eager to further my knowledge in the IT field, focusing on programming, system management, and cybersecurity. </div> <br>
+                <div>
+                    My goal is to apply these skills in a professional setting, <br>
+                    where I can contribute to innovative solutions while continuing to learn and grow. <br>
+                    I am committed to developing my abilities and pursuing a career in the dynamic and ever-evolving world of IT, <br>
+                    where I can make a meaningful impact through my skills and dedication.
+                </div>
+            </div>
+            <div class="cv-grid-title cv-blue-text">WORK EXPERIENCE</div>
+            <div class="cv-grid-content"><hr></div>
+            <div class="cv-grid-title blue-text " id="cv-padding-work">10/06/2024 – 28/06/2024 <br> Pordenone, Italy</div>
+            <div class="cv-grid-content" >
+                <h3>Front-Office Clerk (Intern) <br>
+                    Italian General Confederation of Work - CGIL-School</h3>
+                    <ol>
+                        <li>- Information management with PC</li>
+                        <li>- Relations with association clients</li>
+                        <li>- Membership registration for new clients</li>
+                        <li>- Completion of specific calls for applications on the MIUR Ministry website</li>
+                        <li>- Client contact</li>
+                    </ol>
+                      
+            </div>
+            <div class="cv-grid-title blue-text">EDUCATION AND TRAINING</div>
+            <div class="cv-grid-content"><hr></div>
+            <div class="cv-grid-title blue-text" id="cv-padding-education">12/09/2021 – Current <br>Pordenone, Italy</div>
+            <div class="cv-grid-content">
+                <h3>Fourth-Year Student - (Business Information Systems) <br>
+                    Mattiussi - Pertini Higher Education Institute</h3>
+
+                <p>Subjects studied:</p>
+                <ol>
+                    <li>• &nbsp; Computer Science (Programming Languages)</li>
+                    <li>• &nbsp; Business Economics</li>
+                    <li>• &nbsp; Political Economy</li>
+                    <li>• &nbsp; Law</li>
+                </ol>
+
+                <ul>
+                <li> <em>Website:</em> &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://isismattiussipertini.edu.it/" target="_blank">https://isismattiussipertini.edu.it/</a></li>
+                <li> <em>Field of study:</em> &nbsp;&nbsp;Interdisciplinary programs and qualifications related to economics, business technology, and law.</li>
+                <li> <em>EQF Level:</em> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Level 3 EQF</li>
+
+            </div>
+            <div class="cv-grid-title blue-text" id="cv-padding-education">03/2024-10/2024
+                <br>Pordenone, Italy</div>
+            <div class="cv-grid-content">
+                <h3>Certificate in Basic Safety Course <br>
+                    - Ministry of Education, University and Research</h3>
+                    <em>Website:</em> &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://alternanza.miur.gov.it/" target="_blank">https://alternanza.miur.gov.it/</a>
+                  
+            </div>
+
+            <div class="cv-grid-title blue-text" id="cv-padding-education">03/2024-10/2024
+                <br>Pordenone, Italy</div>
+            <div class="cv-grid-content">
+                <h3>Certification of Citizenship Competencies for Sustainable Development <br>
+                    - Pordenone-Udine Chamber of Commerce</h3>
+                    <ol>
+                        <li>• &nbsp; Asynchronous e-learning training "GreenComp."</li>
+                        <li>• &nbsp; Asynchronous e-learning training "DigComp."</li>
+                        <li>• &nbsp; Digital Storytelling.</li>
+                        <li>• &nbsp; How to produce a video in camera.</li>
+                        <li>• &nbsp; How to produce a video in screencast or slideshow.</li>
+                      </ol>
+                      
+                      
+                    <em>Website:</em> <a href="https://www.pnud.camcom.it/" target="_blank">https://www.pnud.camcom.it/</a>
+                    <br><em>Link of my work:</em> <a href="https://drive.google.com/file/d/1xY274iBt411rgsIy7sp1sqf_43YLtvH-/view" target="_blank">https://drive.google.com/file/d/1xY274iBt411rgsIy7sp1sqf_43YLtvH-/view</a>        
+            </div>
+
+            <div class="cv-grid-title blue-text">PERSONAL SKILLS</div>
+            <div class="cv-grid-content"><hr></div>
+            <div class="cv-grid-title blue-text">Mother tongue(s)</div>
+            <div class="cv-grid-content">Moroccan Darija - Italian</div>
+            <div class="cv-grid-title"> <div class="blue-text">Other lenguages</div>
+             
+              <div class="cv-grid-title" id="lenguages"> <br><br><br>English</div>
+              <div class="cv-grid-title" id="lenguages"> <br><br><br> French</div>
+              
+            </div>
+            <div class="cv-tabella">
+                <div class="cv-container">
+                    <!-- Prima riga con 3 colonne -->
+                    <div class="cv-blue-text cv-text-size">UNDERSTANDING</div>
+                    <div class="cv-blue-text">SPEKING</div>
+                    <div class="cv-blue-text">WRITING</div>
+                </div>
+                <div class="cv-second-row">
+                    <!-- Seconda riga con 5 colonne -->
+                    <div class="cv-blue-text">Listening</div>
+                    <div class="cv-blue-text">Reading</div>
+                    <div class="cv-blue-text">Spoken interaction</div>
+                    <div class="cv-blue-text">Spoken production</div>
+                    <div class="cv-blue-text"></div>
+                </div>
+           
+           
+            <div class="cv-third-fifth-row">
+                <!-- Seconda riga con 5 colonne -->
+                <div>B2</div>
+                <div>B2</div>
+                <div>B2</div>
+                <div>B2</div>
+                <div>B2</div>
+            </div>
+            <div  class="cv-fourth-six-row">
+                <!-- Seconda riga con 1 colonna -->
+                <div>Replace with name of language certificate. Enter level if known</div>
+                
+            </div>
+            <div class="cv-third-fifth-row">
+                <!-- Seconda riga con 5 colonne -->
+                <div>A2</div>
+                <div>B1</div>
+                <div>B1</div>
+                <div>B1</div>
+                <div>A2</div>
+            </div>
+            <div  class="cv-fourth-six-row">
+                <!-- Seconda riga con 1 colonna -->
+                <div>Replace with name of language certificate. Enter level if known</div>
+                
+            </div>
+         </div>
+            <div class="cv-grid-title cv-blue-text">Communication skills</div>
+            <div class="cv-grid-content">I possess well-developed communication skills, <br> 
+                honed through presenting intricate technical concepts during my Business Information Systems studies. <br>
+                 I have consistently demonstrated the ability to articulate programming and technical ideas clearly to peers, <br>
+                  both in collaborative group discussions and written assignments. <br>
+                   Additionally, I manage a YouTube channel where I produce and upload content related to my video game projects, <br>
+                    as well as educational tutorials for people in the lower classes in Business Information Systems. <br>
+                    This experience has further refined my ability to present technical information in an engaging,  accessible, <br>
+                     and comprehensible manner, ensuring it resonates with a broader audience. <br><br>
+            </div>
+            <div class="cv-grid-title blue-text">Organisational / managerial skills</div>
+            <div class="cv-grid-content">I possess exceptional organizational skills, <br>
+                            developed through successfully managing multiple responsibilities, including academic assignments, extracurricular activities, <br>
+                              and personal projects, such as the development of a video game. <br>
+                             Additionally, I oversee my YouTube channel, which involves careful planning, content creation, <br>
+                             and adhering to deadlines for video uploads. My strong time management abilities were further <br>
+                             demonstrated during the School Work Alternation Race,  where I was awarded second place for presenting my short film Pepsi Can.<br>
+                             I am highly self-motivated, able to independently manage my learning in areas such as programming and cybersecurity, <br>
+                             while simultaneously planning and advancing my career development.</div>
+        
+            <div class="cv-grid-title blue-text">Digital Skills</div>
+            <div class="cv-grid-content">I have strong digital skills, including advanced proficiency in Microsoft Office Suite (Word, Excel, <br>
+                  PowerPoint) and expertise in social media management across platforms such as Facebook, Instagram, <br>
+                   TikTok, YouTube, Twitter, and Pinterest. I am adept at handling email communication efficiently using <br>
+                    Gmail and Outlook and have experience in web browsing and online research with Google tools. <br><br>
+                    Additionally, I possess knowledge of web development and programming languages, including HTML, <br>
+                     CSS, JavaScript, Java, and C# (C Sharp). My multimedia skills include video recording, editing, and post-production, <br>
+                      as well as photo and graphic design using tools like Canva. These skills enable me to create <br>
+                       engaging content and manage digital projects effectively.</div>
+            <div class="cv-grid-title">
+                <div class="cv-grid-content"></div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        window.onload = function() {
+            document.body.style.zoom = "80%";
+        };
+    </script>
+</body>
+</html>
